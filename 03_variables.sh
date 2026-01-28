@@ -1,12 +1,12 @@
 #! /bin/bash
 
 echo "Enter the username: "
-read READ_NAME
+read USER_NAME
 
 echo "Enter the last name: "
 read LAST_NAME
 
-echo "Hello $READ_NAME $LAST_NAME, welcome to DevOps"
+echo "Hello $USER_NAME $LAST_NAME, welcome to DevOps"
 
 echo "Enter the password: "
 read -s PASSWORD
