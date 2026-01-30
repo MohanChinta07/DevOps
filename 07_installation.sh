@@ -1,0 +1,29 @@
+#! /bin/bash
+
+USER_ID=$(id -u)
+
+if [ $USER_ID -ne 0 ]; then
+    echo "Please run this script with root user access"
+    exit 1
+fi
+
+echo "Starting the intalling nginx web server"
+dnf install nginx -y
+
+if [ $? -ne 0 ];then
+    echo "Installing Nginx ... FAILURE."
+    exit 1
+else
+    echo "Installing Nginx ... SUCCESS."
+fi
+
+echo "Starting the intalling mysql "
+dnf install mysql -y
+
+if [ $? -ne 0 ]; then
+    echo "Installing mysql ... FAILURE."
+    exit 1
+else
+    echo "Installing Nginx ... SUCCESS".
+fi
+
